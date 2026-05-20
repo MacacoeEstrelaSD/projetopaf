@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tabaco e Novas Formas de Consumo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#222;
+    transition:0.4s;
+}
+
+/* MODO ESCURO */
+
+body.dark{
+    background:#121212;
+    color:white;
+}
+
+body.dark header{
+    background:#1e1e1e;
+}
+
+body.dark section{
+    background:#1c1c1c;
+}
+
+body.dark .card{
+    background:#2a2a2a;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    z-index:1000;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+height:100px;
+    width:auto;
+    margin-right:15px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00bfff;
+}
+
+/* BOTÃO */
+
+.toggle-btn{
+    background:#00bfff;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('imagens/imageminiciopaf.jpg') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    animation:fadeIn 2s;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 10%;
+    animation:fadeUp 1s;
+}
+
+section h2{
+    margin-bottom:20px;
+    color:#00bfff;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* FORMULÁRIO */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input, textarea{
+    margin-bottom:15px;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:12px;
+    background:#00bfff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-area">
+    <img src="imagens/logotipoepipaf.png" class="logo" alt="Logo">
+    <h2>Tabaco e Novas Formas de Consumo</h2>
+</div>
+
+<nav>
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#novas">Novas Formas</a></li>
+<li><a href="#impactos">Impactos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+<h1>Tabaco e Novas Formas de Consumo</h1>
+
+<p>
+Conhece os riscos do tabaco tradicional, vape e novas tendências de consumo.
+</p>
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+<h2>Sobre o Tabaco</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Tabaco Tradicional</h3>
+<p>
+O consumo de cigarros continua a causar milhões de mortes por ano.
+</p>
+</div>
+
+<div class="card">
+<h3>Nicotina</h3>
+<p>
+A nicotina cria dependência e afeta o sistema nervoso.
+</p>
+</div>
+
+<div class="card">
+<h3>Fumo Passivo</h3>
+<p>
+O fumo afeta também pessoas que não fumam.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- NOVAS FORMAS -->
+
+<section id="novas">
+
+<h2>Novas Formas de Consumo</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Vapes</h3>
+<p>
+Os cigarros eletrónicos tornaram-se populares entre os jovens.
+</p>
+</div>
+
+<div class="card">
+<h3>Pods</h3>
+<p>
+Dispositivos compactos com sabores variados e elevada nicotina.
+</p>
+</div>
+
+<div class="card">
+<h3>Tabaco Aquecido</h3>
+<p>
+Promovido como alternativa, mas continua a trazer riscos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- IMPACTOS -->
+
+<section id="impactos">
+
+<h2>Impactos na Saúde</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Pulmões</h3>
+<p>
+Pode causar doenças respiratórias graves.
+</p>
+</div>
+
+<div class="card">
+<h3>Coração</h3>
+<p>
+Aumenta o risco de problemas cardiovasculares.
+</p>
+</div>
+
+<div class="card">
+<h3>Dependência</h3>
+<p>
+A nicotina provoca forte dependência química.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+<p>
+© 2025 - Trabalho Escolar | Tabaco e Novas Formas de Consumo
+</p>
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+function darkMode(){
+    document.body.classList.toggle("dark");
+}
+
+</script>
+
+</body>
+</html>
+```
