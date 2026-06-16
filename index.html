@@ -3,394 +3,257 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Tabaco e Novas Formas de Consumo</title>
-
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
-    color:#222;
-    transition:0.4s;
-}
-
-/* MODO ESCURO */
-
-body.dark{
-    background:#121212;
-    color:white;
-}
-
-body.dark header{
-    background:#1e1e1e;
-}
-
-body.dark section{
-    background:#1c1c1c;
-}
-
-body.dark .card{
-    background:#2a2a2a;
-}
-
-/* HEADER */
-
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#111;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
-    z-index:1000;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-}
-
-.logo{
-height:100px;
-    width:auto;
-    margin-right:15px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:20px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#00bfff;
-}
-
-/* BOTÃO */
-
-.toggle-btn{
-    background:#00bfff;
-    border:none;
-    padding:10px 15px;
-    border-radius:8px;
-    cursor:pointer;
-    color:white;
-}
-
-/* HERO */
-
-.hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('imagens/imageminiciopaf.jpg') center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero-content{
-    animation:fadeIn 2s;
-}
-
-.hero h1{
-    font-size:50px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:20px;
-}
-
-/* SECTIONS */
-
-section{
-    padding:100px 10%;
-    animation:fadeUp 1s;
-}
-
-section h2{
-    margin-bottom:20px;
-    color:#00bfff;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* FORMULÁRIO */
-
-form{
-    display:flex;
-    flex-direction:column;
-}
-
-input, textarea{
-    margin-bottom:15px;
-    padding:12px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
-
-button{
-    padding:12px;
-    background:#00bfff;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-/* ANIMAÇÕES */
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* RESPONSIVO */
-
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f4f4f4;color:#222}
+header{position:fixed;top:0;width:100%;background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;z-index:1000}
+.logo-area{display:flex;align-items:center}
+.logo{height:120px;width:auto;margin-right:15px}
+nav ul{display:flex;list-style:none}
+nav ul li{margin-left:20px}
+nav a{color:#fff;text-decoration:none}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('imagens/imageminiciopaf.jpg') center/cover;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.hero h1{font-size:50px;margin-bottom:20px}
+.hero p{max-width:900px;line-height:1.6}
+section{padding:100px 10%;scroll-margin-top:120px}
+h2{margin-bottom:20px;color:#00bfff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+footer{background:#111;color:#fff;text-align:center;padding:20px}
 @media(max-width:768px){
-
-    header{
-        flex-direction:column;
-    }
-
-    nav ul{
-        margin-top:10px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:35px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
+header{flex-direction:column}
+nav ul{margin-top:10px;flex-wrap:wrap;justify-content:center}
+.hero h1{font-size:35px}
+}
+#prevencao ul{
+    margin-top:20px;
+    margin-left:25px;
+    line-height:1.8;
 }
 
+#prevencao li{
+    margin-bottom:20px;
+}
+
+#prevencao h3{
+    color:#00bfff;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+#sobre-mim{
+    background:white;
+    line-height:1.8;
+}
+
+#sobre-mim p{
+    margin-bottom:15px;
+}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-
 <header>
-
 <div class="logo-area">
-    <img src="imagens/logotipoepipaf.png" class="logo" alt="Logo">
-    <h2>Tabaco e Novas Formas de Consumo</h2>
+<img src="imagens/logotipoepipaf.png" class="logo" alt="Logo">
+<h2>Tabaco e Novas Formas de Consumo</h2>
 </div>
-
 <nav>
 <ul>
 <li><a href="#inicio">Início</a></li>
 <li><a href="#sobre">Sobre</a></li>
 <li><a href="#novas">Novas Formas</a></li>
 <li><a href="#impactos">Impactos</a></li>
-<li><a href="#contacto">Contacto</a></li>
+<li><a href="#prevencao">Prevenção</a></li>
+<li><a href="#sobre-mim">Sobre Mim</a></li>
 </ul>
 </nav>
-
-
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="inicio">
-
-<div class="hero-content">
+<div>
 <h1>Tabaco e Novas Formas de Consumo</h1>
-
 <p>
-Conhece os riscos do tabaco tradicional, vape e novas tendências de consumo.
+O consumo de tabaco continua a ser um dos maiores desafios para a saúde pública em todo o mundo.
+Além dos cigarros tradicionais, surgiram novas formas de consumo, como os cigarros eletrónicos,
+os pods e os dispositivos de tabaco aquecido. Embora sejam frequentemente apresentados como
+alternativas menos prejudiciais, continuam a representar riscos para a saúde. Neste site vais
+conhecer os diferentes tipos de consumo de tabaco, os seus impactos no organismo e a importância
+da prevenção.
 </p>
 </div>
-
 </section>
-
-<!-- SOBRE -->
 
 <section id="sobre">
-
 <h2>Sobre o Tabaco</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>Tabaco Tradicional</h3>
-<p>
-O consumo de cigarros continua a causar milhões de mortes por ano.
-</p>
+<p>O tabaco é uma planta utilizada na produção de cigarros, charutos e outros produtos. Quando queimado, liberta milhares de substâncias químicas, incluindo várias consideradas cancerígenas. O seu consumo está associado a milhões de mortes todos os anos.</p>
+<img src="imagens/imagemtabacotradicional.webp"
+         alt="Tabaco Tradicional"
+         class="card-img" width=100%>
 </div>
-
 <div class="card">
 <h3>Nicotina</h3>
-<p>
-A nicotina cria dependência e afeta o sistema nervoso.
-</p>
+<p>A nicotina é a principal substância responsável pela dependência. Ao chegar rapidamente ao cérebro, provoca sensações temporárias de prazer, levando o consumidor a querer repetir a experiência.</p>
+<img src="imagens/imagemnicotina.webp"
+         alt="Nicotina"
+         class="card-img">
 </div>
-
 <div class="card">
 <h3>Fumo Passivo</h3>
-<p>
-O fumo afeta também pessoas que não fumam.
-</p>
+<p>O fumo afeta não apenas os fumadores, mas também as pessoas que os rodeiam. Crianças, idosos e pessoas com problemas respiratórios são especialmente vulneráveis.</p>
+<img src="imagens/imagemfumopassivo.webp"
+         alt="Fumo Passivo"
+         class="card-img" width=100%>
 </div>
-
 </div>
-
 </section>
-
-<!-- NOVAS FORMAS -->
 
 <section id="novas">
-
 <h2>Novas Formas de Consumo</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>Vapes</h3>
-<p>
-Os cigarros eletrónicos tornaram-se populares entre os jovens.
-</p>
+<p>Os cigarros eletrónicos aquecem um líquido que pode conter nicotina, aromas e outras substâncias químicas. Apesar de não produzirem fumo tradicional, podem causar dependência e problemas respiratórios.</p>
+<img src="imagens/imagemvapes.avif"
+         alt="Vapes"
+         class="card-img" width=100%>
 </div>
-
 <div class="card">
 <h3>Pods</h3>
-<p>
-Dispositivos compactos com sabores variados e elevada nicotina.
-</p>
+<p>Os pods são dispositivos compactos e discretos, frequentemente utilizados por jovens. Muitos contêm níveis elevados de nicotina, aumentando o risco de dependência.</p>
+<img src="imagens/imagempods.webp"
+         alt="Pods"
+         class="card-img" width=100%>
 </div>
-
 <div class="card">
 <h3>Tabaco Aquecido</h3>
-<p>
-Promovido como alternativa, mas continua a trazer riscos.
-</p>
+<p>Estes dispositivos aquecem o tabaco sem o queimar diretamente. Embora produzam menos substâncias tóxicas do que os cigarros tradicionais, continuam a apresentar riscos para a saúde.</p>
+ <img src="imagens/imagemtabacoaquecido.jpg"
+         alt="Tabaco aquecido"
+         class="card-img" width=100%>
 </div>
-
 </div>
-
 </section>
-
-<!-- IMPACTOS -->
 
 <section id="impactos">
-
 <h2>Impactos na Saúde</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>Pulmões</h3>
-<p>
-Pode causar doenças respiratórias graves.
-</p>
+<p>O consumo de tabaco aumenta o risco de bronquite crónica, enfisema pulmonar e cancro do pulmão, além de reduzir a capacidade respiratória.</p>
+<img src="imagens/imagempulmao.jpg"
+     alt="Pulmões"
+     class="card-img" width=100%>
 </div>
-
 <div class="card">
 <h3>Coração</h3>
-<p>
-Aumenta o risco de problemas cardiovasculares.
-</p>
+<p>Fumar aumenta a pressão arterial e favorece a acumulação de gordura nas artérias, elevando o risco de enfarte e AVC.</p>
+<img src="imagens/imagemcoracao.webp"
+         alt="Impactos no coração"
+         class="card-img" width=100%>
 </div>
-
 <div class="card">
 <h3>Dependência</h3>
-<p>
-A nicotina provoca forte dependência química.
-</p>
+<p>A nicotina provoca forte dependência química, podendo causar ansiedade, irritabilidade e dificuldade de concentração quando o consumo é interrompido.</p>
+<img src="imagens/imagemdependencia.jpg"
+         alt="Dependência da nicotina"
+         class="card-img"  width=100%>
 </div>
-
 </div>
-
 </section>
 
+<section id="prevencao">
 
+    <h2>Prevenção e Soluções</h2>
 
+    <p>
+        A prevenção é fundamental para reduzir o consumo de tabaco. A informação e a educação ajudam os jovens a compreender os riscos associados ao consumo. Para quem pretende deixar de fumar, existem consultas médicas, terapias de substituição da nicotina e programas de apoio especializados. A prática de exercício físico e a adoção de hábitos saudáveis contribuem para melhorar a qualidade de vida e reduzir a dependência.
+    </p>
 
-<!-- FOOTER -->
+    <h3>Contactos de Apoio ao Tabagismo</h3>
 
-<footer>
-<p>
-© 2025 - Trabalho Escolar | Tabaco e Novas Formas de Consumo
-</p>
+    <p>
+        Se pretende deixar de fumar ou obter mais informações sobre a cessação tabágica, pode recorrer às seguintes entidades de apoio:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Liga Portuguesa Contra o Cancro</strong><br>
+            Consultas gratuitas de cessação tabágica, presenciais ou online.<br>
+            Email: cessacaotabagica.nrs@ligacontracancro.pt<br>
+            Telefone: 217 264 099 (09h00 às 18h00)<br>
+            Telemóvel: 912 732 946 (08h30 às 13h00 e 14h00 às 16h30)
+        </li>
+
+        <li>
+            <strong>IQOS Portugal</strong><br>
+            Apoio em tempo real através da assistente digital ISA, disponível 24 horas por dia, 7 dias por semana, bem como atendimento por especialistas.
+        </li>
+
+        <li>
+            <strong>Centro de Medicina Digital P5</strong><br>
+            Programa de Cessação Tabágica com aconselhamento clínico e psicológico especializado para ajudar os fumadores a abandonar o consumo.
+        </li>
+
+        <li>
+            <strong>Unidade de Desabituação Tabágica do Hospital CUF Porto</strong><br>
+            Disponibiliza acompanhamento médico especializado e planos personalizados para apoiar a cessação tabágica.
+        </li>
+    </ul>
+
+    <p>
+        Estas entidades disponibilizam apoio profissional, informação e recursos que podem aumentar significativamente as probabilidades de sucesso na cessação do tabagismo, contribuindo para uma melhor qualidade de vida e para a prevenção de doenças relacionadas com o consumo de tabaco.
+    </p>
+
+</section>
+<section id="sobre-mim">
+
+    <h2>Sobre Mim</h2>
+
+    <p>
+        O meu nome é <strong>Frederico Pinho</strong> e sou aluno da
+        <strong>Escola Profissional do Infante</strong>.
+    </p>
+
+    <p>
+        Escolhi desenvolver este trabalho sobre o tema
+        <strong>"Tabaco e Novas Formas de Consumo"</strong> por considerar
+        que é um assunto muito importante para a sociedade atual,
+        especialmente para os jovens.
+    </p>
+
+    <p>
+        Nos últimos anos, produtos como os cigarros eletrónicos, os pods e o
+        tabaco aquecido tornaram-se cada vez mais populares. Muitas pessoas
+        acreditam que estas alternativas são totalmente seguras, mas continuam
+        a existir riscos para a saúde e para o desenvolvimento da dependência
+        da nicotina.
+    </p>
+
+    <p>
+        Com este site pretendo sensibilizar os visitantes para os perigos do
+        consumo de tabaco e informar sobre os seus efeitos no organismo,
+        contribuindo para uma maior consciencialização e para a adoção de
+        hábitos de vida mais saudáveis.
+    </p>
+
+</section>
+<footer style="text-align: center;">
+
+  <img 
+    src="imagens/barra_site_financiamento.png" 
+    alt="Financiamento" 
+    width="600" 
+    height="185"
+    style="display: block; margin: 0 auto;"
+  >
+<br>
+  <p>© 2026 - Trabalho Escolar | Tabaco e Novas Formas de Consumo</p>
+
 </footer>
-
-<!-- SCRIPT -->
-
-<script>
-
-function darkMode(){
-    document.body.classList.toggle("dark");
-}
-
-</script>
 
 </body>
 </html>
-```
